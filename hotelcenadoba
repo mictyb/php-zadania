@@ -1,0 +1,57 @@
+<?php
+function rentCost(int $days): float{
+
+if($days == 1){
+  echo $days;
+$koszt = 200;
+
+
+}
+elseif($days>=2 & $days<=3){
+$koszt = ($days * 180.0);
+echo 'fdfg';
+  }
+elseif($days >= 4 & $days<=7){
+$koszt = $days * 160.0;
+  }
+elseif($days > 7 ){
+echo 'bonus &nbsp';
+  $znika = 0;
+  $znizka = floor($days/7);
+$koszt = ($days * 150.0) - ($znizka *50);
+  }
+else {
+$koszt = 0;
+}
+
+
+echo 'koszt wynajmu wynosi &nbsp' ;
+return $koszt;
+}
+
+
+
+$days = 15;
+echo rentCost($days);
+/*
+
+Napisz funkcję rentCost(int $days): float, która pobiera liczbę dni jako argument, 
+a następnie wylicza koszt wynajmu pokoju według podanego wzoru:
+
+wynajem trwa jeden dzień, koszt pokoju 200 zł/dzień,
+wynajem trwa od dwóch do trzech dni, koszt pokoju 180 zł/dzień,
+wynajem trwa od czterech do siedmiu dni, koszt pokoju 160 zł/dzień,
+wynajem trwa osiem lub więcej dni, koszt pokoju 150 zł/dzień.
+Dodatkowo za każdy pełny tydzień (7 dni) przysługuje 50 zł zniżki.
+Funkcja ma zwracać obliczony koszt.
+
+Przykład:
+
+echo rentCost(8);   //1150.00
+echo rentCost(3);   //540.00
+echo rentCost(15);  //2150.00
+
+*/
+
+
+?>
